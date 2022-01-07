@@ -16,20 +16,20 @@ def translate(x):
 
     elif len(get_close_matches(x, data.keys()))> 0 :
         print("Você quis dizer: %s ?" %get_close_matches(x, data.keys())[0])
-        decide = input("That's it? y ou n.")
+        decide = input("A palavra é esta? s ou n? ")
 
-        if decide == "y":
+        if decide == "s":
             return data[get_close_matches(x, data.keys())[0]]
 
         elif decide == "n":
-            return ("pugger yur paw steps on wrong keys ")
+            return ("Ops, acho que me enganei! ")
 
         else:
-            return ("just n or y ")
+            return ("É só sim (s) ou não (n)... ")
     else:
-        return "### Pugger yur paw steps on wrong keys ###"
+        return "### Desculpe! Não pude encontrar! ###"
 
-x = input("Enter the word you want to search: ")
+x = input("Fala que o dicionário escuta: ")
 output = translate(x)
 
 if type(output) == list:
