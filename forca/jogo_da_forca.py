@@ -26,7 +26,8 @@ def hangman():
         if guess in validLetters:
             guessmade = guessmade + guess
         else:
-            guess = input("Ecreva um caracter válido: ")
+            print("Ecreva um caracter válido: ")
+            guess = input()
 
         if guess not in word:
             turns = turns - 1
